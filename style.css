@@ -1,5 +1,26 @@
+#search {
+  width: 30%;
+  height: 50;
+  font-size: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50px;
+  position: fixed;
+}
+.container_members {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .li_members {
+  font-size: 20px;
+  cursor: pointer;
   display: none;
+}
+.li_members:hover {
+  color: blue;
 }
 .li_members.active {
   display: block;
