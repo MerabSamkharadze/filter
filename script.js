@@ -10,9 +10,6 @@ const asyncCall = async () => {
     const dataResponse = await response.json();
 
     createLists(dataResponse);
-    search.addEventListener("keyup", function () {
-      filterItem(this.value);
-    });
   } catch (error) {
     const errorText = document.createElement("h1");
     console.log(error);
@@ -36,10 +33,13 @@ function filterItem(value) {
   membersArr.forEach((element) => {
     if (value === "") {
       element.classList.remove("active");
-    } else if (element.innerText.includes(value.trim())) {
+    } else if (element.innerText.includes(value.trim().toLowerCase())) {
       element.classList.add("active");
     } else {
       element.classList.remove("active");
     }
   });
 }
+search.addEventListener("keyup", function () {
+  filterItem(this.value);
+});
