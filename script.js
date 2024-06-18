@@ -34,7 +34,9 @@ function createLists(data) {
 }
 function filterItem(value) {
   membersArr.forEach((element) => {
-    if (element.innerText.includes(value)) {
+    if (value === "") {
+      element.classList.remove("active");
+    } else if (element.innerText.includes(value.trim())) {
       element.classList.add("active");
     } else {
       element.classList.remove("active");
