@@ -1,14 +1,17 @@
 #search {
-  width: 30%;
-  height: 50;
+  position: fixed;
+  width: 35%;
+  height: 50px;
   font-size: 30px;
   left: 50%;
   transform: translate(-50%);
   top: 50px;
-  position: fixed;
+}
+#search:focus::placeholder {
+  opacity: 0;
 }
 .container_members {
-  margin-top: 100px;
+  margin-top: 125px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,9 +21,11 @@
   font-size: 20px;
   cursor: pointer;
   display: none;
+  border: 1px solid gray;
+  padding: 10px;
 }
 .li_members:hover {
-  color: blue;
+  background-color: antiquewhite;
 }
 .li_members.active {
   display: block;
